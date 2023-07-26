@@ -1,0 +1,522 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&display=swap");
+
+/* Reusable Code */
+.hidden {
+  opacity: 0;
+  filter: blur(5px);
+  transform: translateX(-100%);
+  transition: all 1s;
+}
+
+.show {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateX(0);
+}
+
+@media (prefers-reduced-motion) {
+  .hidden {
+    transition: none;
+  }
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Nunito", sans-serif;
+  background: linear-gradient(113.49deg, #984d38 -30.3%, #181e41 58.12%);
+  /* overflow-x: hidden; */
+}
+
+main {
+  overflow: hidden;
+}
+
+.section-padding {
+  padding: 100px 0;
+}
+
+.text-violet {
+  color: #b75cff;
+}
+
+.card {
+  background-color: transparent;
+  border: none;
+}
+
+.text-grey {
+  color: rgb(170, 165, 165);
+}
+
+.brand-name {
+  letter-spacing: 1px;
+  font-weight: 800;
+}
+
+.links {
+  margin: 0 20px;
+}
+
+.items-nav {
+  position: relative;
+  letter-spacing: 1px;
+  font-weight: 500;
+}
+
+.wallet-btn {
+  background-color: #b75cff;
+  border-radius: 1rem;
+  text-decoration: none;
+  padding: 17px 17px;
+  letter-spacing: 1px;
+  font-weight: 500;
+  transition: 200ms;
+}
+
+.nft-btn {
+  background-color: rgb(170, 165, 165);
+  color: #ffffff;
+  text-decoration: none;
+  cursor: pointer;
+  padding: 17px 17px;
+  letter-spacing: 1px;
+  font-weight: 500;
+  transition: 200ms;
+  border-radius: 1rem;
+}
+
+/* bUTTON POP UP HOVER EFFECT START*/
+
+.wallet-btn:hover {
+  text-decoration: none;
+  color: #000;
+}
+
+@-webkit-keyframes pop-on-hover {
+  50% {
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+  }
+}
+@keyframes pop-on-hover {
+  50% {
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+  }
+}
+.pop-on-hover {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+}
+.pop-on-hover:hover,
+.pop-on-hover:focus,
+.pop-on-hover:active {
+  -webkit-animation-name: pop-on-hover;
+  animation-name: pop-on-hover;
+  -webkit-animation-duration: 0.3s;
+  animation-duration: 0.3s;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  -webkit-animation-iteration-count: 1;
+  animation-iteration-count: 1;
+}
+
+/* bUTTON POP UP HOVER EFFECT END*/
+
+/* navigation UnderLine hover Effect */
+.items-nav::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #9850cf;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.items-nav:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+/* navigation UnderLine hover Effect */
+
+/* Hero Section Start */
+.hero-section {
+  overflow: hidden;
+}
+
+.hero-headings h2 {
+  font-size: 5rem;
+  letter-spacing: 2px;
+  font-weight: 800;
+  line-height: 1.3;
+}
+
+.hero-headings p {
+  font-size: 2rem;
+  letter-spacing: 2px;
+  font-weight: 700;
+  line-height: 1.5;
+  margin-top: 4%;
+}
+
+.service-buttons {
+  margin-top: 4%;
+}
+
+.service-buttons a {
+  margin: 0 12px;
+}
+
+.product-stats-row {
+  margin-top: 8%;
+}
+
+.nft-imgs {
+  margin-top: 10%;
+}
+
+/* Sponsor Section Start */
+
+.sponsor-logos {
+  margin-top: 5%;
+}
+
+.sponsor-headings h2 {
+  font-size: 3rem;
+  letter-spacing: 1px;
+  font-weight: 700;
+}
+
+/* Reward Section */
+.reward-headings h2 {
+  font-size: 3rem;
+  letter-spacing: 2px;
+  font-weight: 700;
+}
+
+.reward-steps-cards {
+  margin-top: 6rem;
+}
+
+.reward-headings p {
+  font-size: 1.5rem;
+  letter-spacing: 1px;
+  font-weight: 600;
+  margin-top: 2rem;
+}
+
+.phone-wallet-para {
+  margin-top: 41%;
+}
+
+.phone-wallet-para h2 {
+  font-size: 3rem;
+  letter-spacing: 1px;
+  font-weight: 700;
+}
+
+.phone-wallet-para p {
+  font-size: 1.5rem;
+  letter-spacing: 1px;
+  font-weight: 600;
+  margin-top: 3%;
+}
+
+.steps-img {
+  border-radius: 23%;
+  transition: all 0.3s;
+}
+
+.steps-img:hover {
+  transform: scale(1.3) rotate(3deg);
+  opacity: 0.8;
+}
+
+.phone-wallet-para a {
+  margin-top: 2%;
+}
+
+.reward-step-process-two {
+  margin-top: 8%;
+}
+
+.reward-step-process-two-text {
+  margin-top: 5%;
+}
+
+.reward-step-process-three {
+  margin-top: 8%;
+}
+
+.rewards {
+  padding: 4% 25%;
+  background-image: url("../img/rewardsbg.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.reward-step-process-three-text {
+  margin-top: 5%;
+}
+
+.reward-amount-heading h2 {
+  font-size: 3rem;
+  letter-spacing: 2px;
+  font-weight: 700;
+}
+
+.explore-btn {
+  background-color: rgb(170, 165, 165);
+  color: #ffffff;
+  padding: 17px 17px;
+  text-decoration: none;
+  cursor: pointer;
+  letter-spacing: 1px;
+  font-weight: 500;
+  border-radius: 1rem;
+  margin-top: 2%;
+}
+
+/* Collection Section Start */
+
+.collection-heading h2 {
+  font-size: 3rem;
+  letter-spacing: 2px;
+  font-weight: 600;
+}
+
+.collection-heading p {
+  font-size: 1.5rem;
+  letter-spacing: 1px;
+  font-weight: 700;
+  margin-top: 2%;
+}
+
+.product-buttons {
+  margin-top: 2%;
+}
+
+.product-buttons a {
+  text-decoration: none;
+  padding: 12px 12px;
+  font-size: 1.5rem;
+  margin: 0 12px;
+}
+
+#product-1 {
+  background-color: rgb(170, 165, 165);
+  color: #ffffff;
+  cursor: pointer;
+  letter-spacing: 1px;
+  font-weight: 500;
+  border-radius: 1rem;
+}
+
+#product-2 {
+  background-color: #b75cff;
+  color: #ffffff;
+  cursor: pointer;
+  letter-spacing: 1px;
+  font-weight: 500;
+  border-radius: 1rem;
+}
+
+.about-nfts {
+  margin: 2.5rem auto;
+}
+
+.about-nfts:nth-child(1){
+  transition-delay: 100ms;
+}
+.about-nfts:nth-child(2){
+  transition-delay: 200ms;
+}
+.about-nfts:nth-child(3){
+  transition-delay: 300ms;
+}
+.about-nfts:nth-child(4){
+  transition-delay: 400ms;
+}
+.about-nfts:nth-child(5){
+  transition-delay: 500ms;
+}
+.about-nfts:nth-child(6){
+  transition-delay: 600ms;
+}
+.about-nfts:nth-child(7){
+  transition-delay: 700ms;
+}
+.about-nfts:nth-child(8){
+  transition-delay: 800ms;
+}
+.about-nfts:nth-child(9){
+  transition-delay: 900ms;
+}
+
+.nft-price {
+  margin-left: 32%;
+}
+
+.our-nfts-img {
+  transition: all 0.4s;
+}
+
+.our-nfts-img:hover {
+  transform: scale(1.3) rotate(3deg);
+  opacity: 0.8;
+}
+
+.buy-buttons {
+  margin-top: 10%;
+}
+
+.claim-btn {
+  text-decoration: none;
+  background-color: #b75cff;
+  border-radius: 1rem;
+  padding: 17px 157px;
+}
+
+/* Airdrop Section Start */
+.airdrop-headings h2 {
+  font-size: 3rem;
+  letter-spacing: 1px;
+  font-weight: 700;
+}
+
+.airdrop-headings p {
+  font-size: 1.5rem;
+  letter-spacing: 1px;
+  font-weight: 600;
+  margin-top: 2%;
+}
+
+#airdrop-btn {
+  background-color: #b75cff;
+  color: #ffffff;
+  cursor: pointer;
+  letter-spacing: 1px;
+  font-weight: 500;
+  border-radius: 1rem;
+}
+
+#nft-btn {
+  background-color: rgb(170, 165, 165);
+  color: #ffffff;
+  cursor: pointer;
+  letter-spacing: 1px;
+  font-weight: 500;
+  border-radius: 1rem;
+}
+
+.airdrops-details {
+  margin-top: 5%;
+}
+
+.box {
+  box-shadow: 0 8px 8px -4px lightblue;
+  margin: 5% 0;
+  padding: 1rem 1rem;
+  display: none;
+}
+
+.box:nth-child(1),
+.box:nth-child(2),
+.box:nth-child(3){
+  display: block;
+}
+
+.active-text {
+  color: #24ff4e;
+  float: right;
+  position: relative;
+  left: 90%;
+}
+
+.active-icon {
+  font-size: 6px;
+}
+
+.bonus-btn {
+  display: flex;
+  justify-content: space-between;
+}
+
+.aird-margin {
+  margin-top: 5%;
+}
+
+.bonus-text {
+  color: #24ff4e;
+  margin-top: 2%;
+}
+
+#load-more{
+  color: #ffffff;
+  background-color: #b75cff;
+  padding: 1rem 1rem;
+  width: 10%;
+  margin: auto;
+  border-radius: 1rem;
+  cursor: pointer;
+}
+
+/* footer section start */
+
+.footer-heading {
+  font-size: 2rem;
+  letter-spacing: 1px;
+  font-weight: 700;
+}
+
+.social-icons span {
+  font-size: 2rem;
+  margin: 4% 3%;
+}
+
+
+
+/* Responsive Codes */
+@media (min-width: 390px) and (max-width: 995px) {
+  nav ul {
+    text-align: center;
+  }
+
+  nav ul li {
+    margin: 0 0 10px 0;
+  }
+
+  .sponsor-imgs {
+    margin: 2rem 0;
+  }
+
+  .phone-wallet-para {
+    margin-top: 20%;
+  }
+
+  .rewards {
+    padding: 4% 11%;
+  }
+
+  .box {
+    margin: 10% 0;
+  }
+
+  .bonus-btn {
+    display: inline-block;
+    flex-direction: column;
+  }
+
+  #load-more{
+    width: 20%;
+  }
+}
